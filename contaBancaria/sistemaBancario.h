@@ -15,7 +15,7 @@ public:
 	void extrato(User &) const;
 	void saque(User &);
 	void deposito(User &);
-	void transferir(User &);
+	bool transferir(User &);
 	
 	// Cadastro
 	void cadastro();

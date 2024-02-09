@@ -103,4 +103,41 @@ void Sistema::saque(User & user)
 	getline(cin, "");
 }
 
+void Sistema::deposito(User & user)
+{
+	int value = 0;
+	system("cls");
+	cout << "Deposito:" << endl;
+	cout << "-----------------\n";
+	cout << "Digite o valor para depositar:" << endl;
+	cout << "@>> ";
+	cin >> value;
+	(value < 0 ? value = value * (-1) : value = value);
+	cout << "Você depositou R$ " << value << ".00" << endl;
+	user.setSal( user.getSal() + value );
+	getline(cin, "");
+}
+
+void Sistema::transferir( User & user )
+{
+	int value = 0;
+	char cpf[13];
+	system("cls");
+	cout << "Transferir:" << endl;
+	cout << "-----------------\n";
+	cout << "Digite o CPF da pessoa que deseja transferir:" << endl;
+	cout << "@>> ";
+	cin >> setw(13) >> cpf;
+	if(!autentication(cpf))
+	{
+		cout << "CPF errado, ou não cadastrado..." << endl;
+		getline(cin, "");
+		return false;
+	}
+	cout << "Digite o valor para transferir: " << endl;
+	cout << "@>> ";
+	cin >> value;
+	
+}
+
 
