@@ -9,7 +9,7 @@ public:
 	int menu() const;
 	
 	// Entrar
-	bool menuLogin() const;
+	bool menuLogin( User ** ) const;
 	int menuConta() const;
 	void showSal(User &) const;
 	void extrato(User &) const;
@@ -19,10 +19,10 @@ public:
 	
 	// Cadastro
 	void cadastro();
-	void inserirUser();
+	void inserirUser( User &);
 private:
-	bool autentication(char &) const;
-	bool autentication(char &, int) const;
+	User autenticationCPF(string) const;
+	string subString(string, int , int) const;
 	int insertValue();
 };
 

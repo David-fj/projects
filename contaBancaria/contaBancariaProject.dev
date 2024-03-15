@@ -1,6 +1,6 @@
 [Project]
-FileName=contaBancaria.dev
-Name=contaBancaria
+FileName=contaBancariaProject.dev
+Name=contaBancariaProject
 Type=1
 Ver=2
 ObjFiles=
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=sistemaBancario.h
+FileName=sistemaBancario.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=user.h
+FileName=sistemaBancario.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=sistemaBancario.cpp
+FileName=user.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -103,8 +103,8 @@ BuildCmd=
 [Unit6]
 FileName=users.txt
 Folder=
-Compile=1
-Link=1
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=

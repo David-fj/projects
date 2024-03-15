@@ -2,35 +2,36 @@
 #define USER_H
 
 #include <iostream>
-using std::ostream;
+#include <string>
+using namespace std;
 
 class User
 {
-friend ostream &operator<<(ostream &, const User &) const; // Serve para pegar o extrato
+friend ostream &operator<<(ostream &, const User &); // Serve para pegar o extrato
 public:
-	User(char &, char &, char &, char &);
+	User( string , string , string , string, int );
+	User();
 	~User();
 	
 	// Functions set
-	void setName( char &);
-	void setTel( char &);
-	void setCpf( char &);
-	void setPassword( char & );
+//	void setName( char *);
+//	void setTel( char *);
+//	void setCpf( char *);
+//	void setPassword( char * );
 	void setSal( int );
 	
 	// Functions get
-	char & getName() const;
-	char & getTel() const;
-	char & getCpf() const;
-	char & getPassword() const;
+	string getName() const;
+	string getTel() const;
+	string getCpf() const;
+	string getPassword() const;
 	int getSal() const;
 	
-	
 private:
-	const char name[20];
-	const char tel[12];
-	const char cpf[13];
-	const char password[20];
+	const string name;
+	const string tel;
+	const string cpf;
+	const string password;
 	int saldo;
 };
 
